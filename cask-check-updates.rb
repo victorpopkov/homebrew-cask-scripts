@@ -2,7 +2,7 @@ class CaskCheckUpdates < Formula
   desc "Script to find outdated casks and their latest versions"
   homepage "https://github.com/victorpopkov/cask-scripts"
   url "https://github.com/victorpopkov/cask-scripts.git"
-  version "0.2.6"
+  version "0.2.7"
 
   depends_on "xmlstarlet"
   depends_on "jq"
