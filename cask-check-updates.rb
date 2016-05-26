@@ -2,7 +2,7 @@ class CaskCheckUpdates < Formula
   desc "Script to find outdated casks and their latest versions"
   homepage "https://github.com/victorpopkov/cask-scripts"
   url "https://github.com/victorpopkov/cask-scripts.git"
-  version "0.2.7"
+  version "0.3.3"
 
   depends_on "xmlstarlet"
   depends_on "jq"
@@ -13,6 +13,6 @@ class CaskCheckUpdates < Formula
   end
 
   test do
-    system "cask-check-updates"
+    system "#{bin}/cask-check-updates", "--version"
   end
 end
