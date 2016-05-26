@@ -2,7 +2,7 @@ class CaskAppcast < Formula
   desc "Script to get the latest available version from appcast URL"
   homepage "https://github.com/victorpopkov/cask-scripts"
   url "https://github.com/victorpopkov/cask-scripts.git"
-  version "0.1.4"
+  version "0.2.2"
 
   depends_on "xmlstarlet"
   depends_on "jq"
@@ -13,6 +13,6 @@ class CaskAppcast < Formula
   end
 
   test do
-    system "cask-appcast"
+    system "#{bin}/cask-appcast", "--version"
   end
 end
