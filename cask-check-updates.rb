@@ -8,11 +8,12 @@ class CaskCheckUpdates < Formula
   depends_on "jq"
 
   def install
-    system "make", "install", "PREFIX=#{prefix}"
+    prefix.install "libexec"
+    prefix.install "test"
     bin.install "bin/cask-check-updates"
   end
 
   test do
-    system "#{bin}/cask-check-updates", "--version"
+    system "#{prefix}/test/bats/bin/bats", "#{prefix}/test/cask-check-updates.bats"
   end
 end

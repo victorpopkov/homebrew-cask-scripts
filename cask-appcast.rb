@@ -8,11 +8,12 @@ class CaskAppcast < Formula
   depends_on "jq"
 
   def install
-    system "make", "install", "PREFIX=#{prefix}"
+    prefix.install "libexec"
+    prefix.install "test"
     bin.install "bin/cask-appcast"
   end
 
   test do
-    system "#{bin}/cask-appcast", "--version"
+    system "#{prefix}/test/bats/bin/bats", "#{prefix}/test/cask-appcast.bats"
   end
 end
