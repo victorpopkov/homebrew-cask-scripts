@@ -1,14 +1,14 @@
 class CaskCheckUpdates < Formula
-  desc "Script to find outdated casks and their latest versions"
+  desc "Scan casks with appcasts for outdated ones and get the latest available version(s)"
   homepage "https://github.com/victorpopkov/cask-scripts"
   url "https://github.com/victorpopkov/cask-scripts.git"
-  version "0.4.8"
+  version "0.5.0"
 
   depends_on "xmlstarlet"
   depends_on "jq"
 
   def install
-    prefix.install "libexec"
+    prefix.install "lib"
     prefix.install "test"
     bin.install "bin/cask-check-updates"
   end
