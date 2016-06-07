@@ -1,14 +1,14 @@
 class CaskAppcast < Formula
-  desc "Script to get the latest available version from appcast URL"
+  desc "Get the latest available version, checkpoint and download URL(s) from appcast"
   homepage "https://github.com/victorpopkov/cask-scripts"
   url "https://github.com/victorpopkov/cask-scripts.git"
-  version "0.3.7"
+  version "0.3.11"
 
   depends_on "xmlstarlet"
   depends_on "jq"
 
   def install
-    prefix.install "libexec"
+    prefix.install "lib"
     prefix.install "test"
     bin.install "bin/cask-appcast"
   end
