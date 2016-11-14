@@ -1,14 +1,14 @@
 class CaskScripts < Formula
-  desc "Collection of small scripts to help maintain the Homebrew-Cask project"
-  homepage "https://github.com/victorpopkov/cask-scripts"
-  url "https://github.com/victorpopkov/cask-scripts.git"
-  version "0.1.7"
+  desc 'Collection of small scripts to help maintain the Homebrew-Cask project'
+  homepage 'https://github.com/victorpopkov/cask-scripts'
+  url 'https://github.com/victorpopkov/cask-scripts.git'
+  version '0.1.7'
 
-  depends_on "xmlstarlet"
-  depends_on "jq"
+  depends_on 'xmlstarlet'
+  depends_on 'jq'
 
   def install
-    system "make", "install", "PREFIX=#{prefix}"
+    system 'make', 'install', "PREFIX=#{prefix}"
   end
 
   test do
