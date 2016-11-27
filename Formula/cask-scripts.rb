@@ -6,6 +6,7 @@ class CaskScripts < Formula
 
   depends_on 'xmlstarlet'
   depends_on 'jq'
+  depends_on 'the_silver_searcher' => :recommended
 
   def install
     system 'make', 'install', "PREFIX=#{prefix}"
